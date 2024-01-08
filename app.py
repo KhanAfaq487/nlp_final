@@ -1,9 +1,6 @@
-# Bring in deps
-import os
 
 from langchain_community.chat_models import ChatOpenAI
 
-from apikey import apikey
 
 import streamlit as st 
 from langchain.llms import OpenAI
@@ -11,8 +8,6 @@ from langchain.prompts import PromptTemplate
 from langchain.chains import LLMChain, SequentialChain 
 from langchain.memory import ConversationBufferMemory
 from langchain.utilities import WikipediaAPIWrapper
-
-os.environ['OPENAI_API_KEY'] = apikey
 
 # App framework
 st.title('🦜🔗 YouTube GPT Creator')
